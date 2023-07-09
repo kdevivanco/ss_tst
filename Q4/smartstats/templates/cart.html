@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+</head>
+<body>
+    <h1> {{client.first_name}}'s cart</h1>
+    {%for product in products%}
+    <div>
+        <h2>{{product.data.name}}</h2>
+        <p>{{product.data.description}}</p>
+        <p>{{product.data.store_price}}</p>
+        <p>{{product.quantity}}</p>
+        <p>{{product.price}}</p>
+        <!-- <form action="/cart" method="POST">
+            <input type="hidden" name="product_id" value="{{product.id}}">
+            <input type="hidden" name="action" value="remove">
+            <input type="submit" value="Remove">
+        </form> -->
+        {%endfor%}
+        <p>Total: {{basket.total_price}}</p>
+</body>
+</html>

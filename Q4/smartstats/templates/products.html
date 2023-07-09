@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Products for category</h1>
+    {%for product in products%}
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+        </thead>
+        <tbody>
+            <th><a href="/product/{{product.id}}">{{product.name}}</a></th>
+            <th>{{product.brand}}</th>
+            <th>{{product.store_price}}</th>
+        </tbody>
+    </table>
+
+    {%endfor%}
+</body>
+</html>
